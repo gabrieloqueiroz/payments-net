@@ -1,11 +1,68 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Payments.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Payments.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Payments.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Payments.Application.dll": {}
+        }
+      },
+      "Payments.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Payments.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Payments.Domain.dll": {}
+        }
+      },
+      "Payments.infra.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Payments.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Payments.infra.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Payments.infra.Data.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Payments.Application/1.0.0": {
+      "type": "project",
+      "path": "../Payments.Application/Payments.Application.csproj",
+      "msbuildProject": "../Payments.Application/Payments.Application.csproj"
+    },
+    "Payments.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Payments.Domain/Payments.Domain.csproj",
+      "msbuildProject": "../Payments.Domain/Payments.Domain.csproj"
+    },
+    "Payments.infra.Data/1.0.0": {
+      "type": "project",
+      "path": "../Payments.infra.Data/Payments.infra.Data.csproj",
+      "msbuildProject": "../Payments.infra.Data/Payments.infra.Data.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Payments.Application >= 1.0.0",
+      "Payments.Domain >= 1.0.0",
+      "Payments.infra.Data >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\": {},
@@ -41,7 +98,17 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\estudos\\.Net\\Payments\\Payments.Application\\Payments.Application.csproj": {
+              "projectPath": "D:\\estudos\\.Net\\Payments\\Payments.Application\\Payments.Application.csproj"
+            },
+            "D:\\estudos\\.Net\\Payments\\Payments.Domain\\Payments.Domain.csproj": {
+              "projectPath": "D:\\estudos\\.Net\\Payments\\Payments.Domain\\Payments.Domain.csproj"
+            },
+            "D:\\estudos\\.Net\\Payments\\Payments.infra.Data\\Payments.infra.Data.csproj": {
+              "projectPath": "D:\\estudos\\.Net\\Payments\\Payments.infra.Data\\Payments.infra.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
